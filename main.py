@@ -64,9 +64,9 @@ def main():
         sys.exit(0)
 
 if os.name == 'nt':
-    os.system('title Hazus')
+    os.system('title Teko')
 else:
-    sys.stdout.write(f"\033]0;Hazus\007")
+    sys.stdout.write(f"\033]0;Teko\007")
     sys.stdout.flush()
 
 clear()
